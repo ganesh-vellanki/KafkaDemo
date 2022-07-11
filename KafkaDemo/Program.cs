@@ -91,6 +91,7 @@ namespace KafkaDemo
 
         public Task StopAsync(CancellationToken cancellationToken)
         {
+            _consumer?.Dispose();
             return Task.CompletedTask;
         }
     }
